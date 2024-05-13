@@ -1,0 +1,42 @@
+@use 'variables';
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 16px;
+    padding-right: 5%;
+    color: variables.$mainColor;
+    float: right;
+    text-align: right;
+
+    a {
+        text-decoration: none;
+        color: variables.$mainColor;
+    }
+
+    &_links {
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        color: variables.$mainColor;
+        display: block;
+        margin-left: 90%;
+        list-style: none;
+        justify-content: end;
+    
+        &_item {
+            padding: 5px;
+
+            &:hover {
+                opacity: 50%;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+    }
+
+    @media (max-width: 767px) {
+        padding: 0;
+        visibility: hidden;
+    }
+}

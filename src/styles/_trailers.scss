@@ -1,0 +1,56 @@
+@use 'variables';
+
+.trailers {
+    margin: 128px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_video_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_main_video {
+            margin-bottom: 16px;
+
+            video {
+                max-width: 900px;
+
+                @media (max-width: 1200px) {
+                    max-width: 500px;
+                }
+
+                @media (max-width: 768px) {
+                    max-width: 99vw;
+                }
+            }
+        }
+
+        &_thumbnails {
+            display: flex;
+            gap: 16px;
+            
+
+            &_thumbnail {
+                cursor: pointer;
+                transition: opacity 0.5s;
+                border: 1px solid variables.$mainColor;
+
+                &:hover {
+                    opacity: 50%;
+                }
+
+                img {
+                    height: clamp(80px, 10vw, 175px);
+                }
+    
+                &--is-active {
+                    border: 1px solid variables.$borderColor;
+                }
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,84 @@
+@use 'variables';
+
+.home {
+    margin-bottom: 150px;
+
+    &_bg {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background-image: url('../images/home/Blade-Runner-2049-Banner.jpeg');
+        
+        @media (max-width: 1200px) {
+            background-image: url('../images/home/home_bg_tablet.jpg');
+            background-size: contain;
+            background-position: center top;
+        }
+
+        @media (max-width: 767px) {
+            background-image: url('../images/home/home_bg_mobile.jpg');
+        }
+
+
+        background-color: variables.$bgColor;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    &_social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 90vh 5vh 0;
+        
+        &_links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+
+            &_item {
+                margin:0 auto; 
+                text-align:center;
+                display:table;
+                
+                img {
+                    width: 25px;
+                    margin: auto;
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+            margin: 44% 5% 0;
+        }
+
+        @media (max-width: 767px) {
+            margin: 86% 3% 0;
+            gap: 32px;
+        }
+    }
+    
+    button {
+        padding: 0 1%;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        border-radius: 30px;
+        border: none;
+        background-color: variables.$mainColor;
+        color: variables.$bgColor;
+        text-decoration: none;
+        height: 2.6rem;
+    }
+}

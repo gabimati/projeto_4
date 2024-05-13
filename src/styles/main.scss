@@ -1,0 +1,35 @@
+@use 'variables';
+@use 'header';
+@use 'home';
+@use 'trailers';
+@use 'synopsis';
+@use 'gallery';
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Montserrat, sans-serif';
+    src: url('../../assets/fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+}
+
+body {
+    background-color: variables.$bgColor;
+
+    img {
+        -drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+}
